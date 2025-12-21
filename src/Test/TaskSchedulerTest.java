@@ -15,6 +15,9 @@ public class TaskSchedulerTest {
                 LocalDateTime.now().plusHours(2), 30));
 
         Task next = scheduler.getNextTask();
-        assertEquals("High", next.toString().split(" ")[0]);
+        public String getName() {
+            return name;
+        }
+        assertEquals("High", next.getName());
     }
 }
