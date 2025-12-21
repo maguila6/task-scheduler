@@ -26,11 +26,6 @@ and deadline, ensuring high-importance and time-sensitive tasks are handled firs
 - If priorities are equal, the task with the earlier deadline is selected
 - The scheduler always returns the highest-priority task first
 
-## How to Run
-```bash
-javac *.java
-java SchedulerApp
-
 ##Sample Output
 Next task: Project (priority=5, deadline=2025-..., duration=180m)
 
@@ -43,16 +38,17 @@ Run unit tests using your IDE or:
 - Add a GUI or REST APi
 - Support recurring tasks
 
+## How to Run
+```bash
+javac *.java
+java SchedulerApp
+
 
 Recruiters **do read this**.
-
----
 
 ##  Make 2 small code improvements (very portfolio-friendly)
 
 ### Improvement 1: Make `Task` comparable
-
-This shows **data structure mastery**.
 
 ```java
 public class Task implements Comparable<Task> {
