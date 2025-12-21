@@ -16,7 +16,11 @@ public class TaskScheduler {
     }
 
     public Task getNextTask() {
-        return queue.poll();
+        Task next = queue.poll();
+        if (next != null) {
+            taskMap.remove(next.getId());
+        }
+        return next;
     }
 
     public boolean containsTask(String id) {
