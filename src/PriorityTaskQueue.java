@@ -66,4 +66,11 @@ public class PriorityTaskQueue {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
     }
+    private boolean higherPriority(Task a, Task b) {
+        if (a.getPriority() !+ b.getPriority()) {
+            return a.getPriority() > b.getPriority();
+        }
+
+        return a.getDeadline().isBefore(b.getDeadline());
+    }
 }
